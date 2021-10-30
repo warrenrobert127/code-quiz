@@ -11,15 +11,21 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-<header class="bg-success text-center">
+<header class="bg-primary text-center">
     <h1>
         Coding-Quiz
     </h1>
 </header>
-    <article class="container">
-        <h2>Describe the app - tiemrs /negative marking</h2>
-        <ul></ul>
+    <article class="container text-center">
+        <h22> Brief into about the timerleft</h22>/h2>
+        <ul>
+            <li>Score = timerleft + correctanswer</li>
+            <li>Timed quiz</li>
+            <li>Negative marking of 5</li>
+            <li> Right answer score is +10</li>
+        </ul>
         <button id="startQuiz" class="btn btn-primary">Start Quiz</button>
+        <h2 id="clock"></h2>
     </article>
     <main id="quiz" class="container text-center">
         <h3 id="take-quiz">
@@ -36,7 +42,7 @@
         
     </main>
 
-    <section id="EndQuiz">
+    <section id="EndQuiz" class="container text-center" >
         <h4>Score<span id="score"></span></h4>
         <input placeholder="Enter player name" id="user"/>
         <button id="saveplayer>">Save User Score</button>

@@ -1,3 +1,5 @@
+var timers = 100;
+var timersObject;
 var quizMe =[
     {
         question:"What is CSS",
@@ -54,6 +56,7 @@ endQuiz.style.display = "none"
 startQuiz.addEventListener("click", function(){
     quiz.style.display = "block"
     startQuiz.style.display = "none"
+    timersObject = setInterval(displayTime, 1000)
     displayQuestions()
 });
 function displayQuestions(){
@@ -72,13 +75,15 @@ function checkAnswer()
 {
     var userChoice = this.getAttribute("data-value");
     console.log(userChoice);
-    if(userChoice === quizMe[currentQuestion].answer)
+    if(userChoice == quizMe[currentQuestion].answer)
     {
         Result.textContent = "Correct Answer"
-        userScore++;
+        userScore+=10;
     }else
     {
         Result.textContent = "Wrong Answer" 
+        timers =timers -3;
+        document.getElementById("clock").innerText = "Timer :" +timers
     }
     if(currentQuestion < quizMe.length -1){
 
@@ -94,5 +99,16 @@ function checkAnswer()
 function endTest(){
     endQuiz.style.display = "block"
     quiz.style.display = "none"
-    score.textContent = userScore;
+    score.textContent = userScore + timers
+    clearInterval(timersObject)
+}
+
+function displayTime(){
+    document.getElementById("clock").innerText = "Timer :"+timers
+    
+    if(timers <= 1){
+        endTest();
+    }else{
+        timers--;
+    }
 }
