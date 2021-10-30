@@ -10,7 +10,7 @@ var quizMe =[
     {
         question:"What is today",
         option1:"Cascading Style express",
-        options2:"Bootstrap",
+        option2:"Bootstrap",
         option3:"Cscading Style Sheet",
         option4:"MAterialize",
         answer:3
@@ -18,7 +18,7 @@ var quizMe =[
     {
         question:"What is the weather like?",
         option1:"Cascading Style express",
-        options2:"Bootstrap",
+        option2:"Bootstrap",
         option3:"Cscading Style Sheet",
         option4:"MAterialize",
         answer:3
@@ -26,7 +26,7 @@ var quizMe =[
     {
         question:"Is it supposed to rain today?",
         option1:"Cascading Style express",
-        options2:"Bootstrap",
+        option2:"Bootstrap",
         option3:"Cscading Style Sheet",
         option4:"MAterialize",
         answer:3
@@ -44,6 +44,13 @@ var option_3 = document.getElementById("option-3");
 var option_4 = document.getElementById("option-4");
 var startQuiz = document.getElementById("startQuiz");
 var Result = document.getElementById("Result");
+var endQuiz = document.getElementById("EndQuiz");
+var score = document.getElementById("score");
+var user = document.getElementById("user");
+var button = document.getElementById("button");
+var history = document.getElementById("history");
+endQuiz.style.display = "none"
+
 startQuiz.addEventListener("click", function(){
     quiz.style.display = "block"
     startQuiz.style.display = "none"
@@ -79,5 +86,13 @@ function checkAnswer()
         displayQuestions()
     }else{
         console.log(userScore);
+        endTest();
     }
+}
+
+
+function endTest(){
+    endQuiz.style.display = "block"
+    quiz.style.display = "none"
+    score.textContent = userScore;
 }
