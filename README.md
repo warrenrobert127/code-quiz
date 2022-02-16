@@ -7,6 +7,6 @@ The app ask the user questions, tells the player whether or not the answer that 
 Deployed url: https://warrenrobert127.github.io/code-quiz/
 github repo: 
 
-![image]
+
 ![](https://user-images.githubusercontent.com/20363030/154203056-8c2b774a-be8b-45aa-b19a-7165619088df.png)
 
