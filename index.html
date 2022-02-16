@@ -1,66 +1,66 @@
-<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Quiz Challenge</title>
+    <link rel="stylesheet" href="assets\css\style.css" />
+  </head>
+  <body>
+    <header>
+     <button class="view-high-score" id="highScoreBtn">View High Scores</button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-<header class="bg-primary text-center">
-    <h1>
-        Coding-Quiz
-    </h1>
-</header>
-    <article class="container text-center">
-        <h22> Brief into about the timerleft</h22>/h2>
-        <ul>
-            <li>Score = timerleft + correctanswer</li>
-            <li>Timed quiz</li>
-            <li>Negative marking of 5</li>
-            <li> Right answer score is +10</li>
-        </ul>
-        <button id="startQuiz" class="btn btn-primary">Start Quiz</button>
-        <h2 id="clock"></h2>
-    </article>
-    <main id="quiz" class="container text-center">
-        <h3 id="take-quiz">
+      <h4 class="timer">Time:<span id="timer">75 </span></h4>
+    </header>
 
-        </h3>
-       
-
-        
-        <p><button id="option-1" class="options btn btn-info" data-value="1"></button></p>
-        <p><button id="option-2" class="options btn btn-info" data-value="2"></button></p>
-        <p><button id="option-3" class="options btn btn-info" data-value="3"></button></p>
-        <p><button id="option-4" class="options btn btn-info" data-value="4"></button></p>
-        <p id="Result"></p>
-        
-    </main>
-
-    <section id="EndQuiz" class="container text-center" >
-        <h4>Score<span id="score"></span></h4>
-        <input placeholder="Enter player name" id="user"/>
-        <button id="saveplayer>">Save User Score</button>
-        <summary id="history"></summary>
-
+    <section id="wrapper" class="container start">
+      <div class="container start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Correct answers are worth 7 points! Keep in mind that incorrect
+          answers will penalize your score by 2 points and your time by 3
+          seconds!
+        </p>
+        <button class="btn startend" id="start-game">Start Quiz</button>
+      </div>
+    </section>
+    <!--quiz section  -->
+    <section id="quiz-question" hidden>
+      <p id="questionTitle"></p>
+      <p><button id="btn0"></button></p>
+      <p><button id="btn1"></button></p>
+      <p><button id="btn2"></button></p>
+      <p><button id="btn3"></button></p>
+      <hr id="linebreak" hidden />
+      <p id="answerCheck" hidden></p>
     </section>
 
+    <!-- check score section -->
 
+    <section id="summary" hidden class="summary">
+      <h2>ALL DONE!</h2>
+      <p>Your final score is <span id="finalScore"></span></p>
+      <form>
+        <p>
+          Enter initials: <input type="text" id="initials" />
+          <button type="submit" id="submitInitials">Submit</button>
+        </p>
+      </form>
+      <p></p>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="assets/script.js"></script>
-</body>
+    <!--   High Scores-->
+
+    <section id="highScores" hidden>
+      <h2>High Scores</h2>
+      <div id="listHighScores"></div>
+      <p>
+        <button type="submit" id="goBackBtn" class="goBack">Go Back</button>
+        <button type="submit" id="clearHighScoresBtn">Clear High Scores</button>
+      </p>
+    </section>
+
+    <script src="assets\js\script.js"></script>
+  </body>
 </html>
