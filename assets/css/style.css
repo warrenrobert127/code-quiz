@@ -26,15 +26,15 @@
   
   #quiz-question {
     margin: 20px;
-    background: #daa1d3;
+    background: green;
   }
   
   button {
-    background-color: purple;
+    background-color: burlywood;
     position: relative;
     padding: 10px;
     font-size: 20px;
-    color: white;
+    color: black;
     top: 30%;
     text-align: center;
     border-radius: 8px;
@@ -54,7 +54,7 @@
     position: relative;
     padding: 10px;
     font-size: 20px;
-    color: white;
+    color: black;
     top: 30%;
     width: auto;
     text-align: center;
